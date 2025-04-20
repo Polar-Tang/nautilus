@@ -1,14 +1,16 @@
 import TurbulenceTitle from "./TurbulenceTitle"
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import { useRef } from "react"
+import { useEffect, useRef, useContext } from "react"
+import { ClipPathContext } from '@/context/clipPathContext';
 
 
 const About = () => {
     const aboutContainerRef = useRef<HTMLDivElement>(null)
 
     gsap.registerPlugin(useGSAP)
+
+    const {clipPath} = useContext(ClipPathContext)
 
         
 useGSAP(() => {
@@ -23,7 +25,7 @@ useGSAP(() => {
           scrub: true,
         },
       })
-  
+      
       items.forEach((item, i) => {
         item &&
         tl.to(item, {
@@ -38,16 +40,36 @@ useGSAP(() => {
     return () => ctx.revert()
   }, [])
 
-
     return (
-        <div ref={aboutContainerRef} className="container mx-auto px-4 py-32">
-            <ul>
+        <div ref={aboutContainerRef} 
+             
+        className=""
+       
+        >
+          <svg>
+  <clipPath id="myClip" viewBox="0 0 100 100" clipPathUnits="objectBoundingBox">
+    <path d={`${clipPath}`}/>
+  </clipPath>
+</svg>
+            <ul
+            className="wave-section bg-oscazul w-[100dvh] relative z-[10] "
+            style={{
+              clipPath: `url(resources.svg#myClip)`,
+              // WebkitClipPath: `url(resources.svg#myClip)`,
+              
+            }}   
+            >
             <TurbulenceTitle title={"Frontend Eninering"}/>
 
             <p className="about-item text-lg mb-8">React Developing</p>
             <p className="about-item text-lg mb-8">Animations</p>
             </ul>
-            <ul>
+            <ul className="wave-section bg-clsand w-full relative z-[20] "
+            style={{
+              clipPath: `url(resources.svg#myClip)`,
+              WebkitClipPath: `url(resources.svg#myClip)`,
+            }} 
+            >
             <TurbulenceTitle title={"Backend Eninering"}/>
             <p className="about-item text-lg mb-8">NodeJS, Golang</p>
             <p className="about-item text-lg mb-8">Owasp top ten</p>

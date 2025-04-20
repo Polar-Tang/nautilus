@@ -21,13 +21,13 @@ const Home = () => {
                 </div>
 
                 <div className="flex items-start p-4 z-10">
-                    <motion.img 
-                      whileHover={{
-                        scale: 1.2,
-                        transition: { duration: 1 },
-                      }}
-                      whileTap={{ scale: 0.9 }}
-                    src="/starfish.png" alt="Starfish" className="h-12 md:h-18 -rotate-15 w-auto" />
+                    <motion.img
+                        whileHover={{
+                            scale: 1.2,
+                            transition: { duration: 1 },
+                        }}
+                        whileTap={{ scale: 0.9 }}
+                        src="/starfish.png" alt="Starfish" className="h-12 md:h-18 -rotate-15 w-auto" />
                 </div>
 
                 <div className="flex-grow flex justify-center items-center z-10">
@@ -43,12 +43,18 @@ const Home = () => {
 
 
 
-            <div className="relative h-[200vh] bg-negro z-0">
+            <div className="relative h-[300vh] z-0">
                 <Wavy />
             </div>
-            <section className="bg-lastwave text-white min-h-screen relative z-2 bg-azul">
+            {/* <div className="relative z-10 h-[100vh] flex flex-col items-center justify-center text-white">
+                <h1 className="text-4xl font-bold">Riding the Wave</h1>
+                <p className="mt-4 max-w-md text-center">
+                    This content appears visually inside the wave, even if it's not *technically* inside the SVG.
+                </p>
+            </div> */}
+            {/* <section className="bg-lastwave text-white min-h-screen relative z-2"> */}
                 <About />
-            </section>
+            {/* </section> */}
         </>
 
 

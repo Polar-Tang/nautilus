@@ -1,10 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useContext, useRef, useState } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from '@gsap/react';
+import { ClipPathContext } from '@/context/clipPathContext';
 
 const Wavy = () => {
-    const [animationState, setanimationState] = useState<gsap.core.Tween>()
+
+    const {setClipPath} = useContext(ClipPathContext)
+
     const overlayRef = useRef<SVGSVGElement>(null);
 
     let numPoints = 10;
@@ -32,8 +35,8 @@ const Wavy = () => {
 
 
         ScrollTrigger.create({
-            // trigger: bod,        // the element to observe scroll against
-            start: "top bottom",        // when overlay hits top of viewport
+            // trigger: bod,         // the element to observe scroll against
+            start: "top bottom",     // when overlay hits top of viewport
             end: "bottom top",       // when overlay leaves viewport
             scrub: true,             // tie animation to scroll position!
             animation: tl            // connect the GSAP timeline
@@ -44,7 +47,7 @@ const Wavy = () => {
             allPoints.push(points) // allPoints.length = 3
             for (let j = 0; j < numPoints; j++) {
                 // 100 reprecent the 100 % of the view in SVG
-                points.push(100) // point.length = 10
+                points.push(200) // point.length = 10
             }
         }
 
@@ -93,9 +96,10 @@ toggle();
                     // fixed X with dynamic Y points
                     d += ` ${cp} ${points[j]} ${cp} ${points[j + 1]} ${p} ${points[j + 1]}`
                 }
-
                 d += isOpened ? ` V 100 H 0`  // bttom of the screen V 100, then closes left H 0
-                    : ` V 0 H 0` // finished at the top
+                : ` V 0 H 0` // finished at the top
+                setClipPath(`path("${d}")`) // not single quotes inside string
+
                 path.setAttribute("d", d)
             }
         }
@@ -115,20 +119,15 @@ toggle();
                     <stop offset="0%" stopColor="#00ff65" /> 
                     <stop offset="100%" stopColor="#ff009a" /> 
                 </linearGradient>
-                <linearGradient id="gradient3" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" stopColor="#1E3E62" />
-                    <stop offset="100%" stopColor="#0B192C" />
-                </linearGradient>
+                
             </defs>
             <path className="shape-overlays__path" 
             stroke="#ffffff"
             strokeWidth="0.6"
-            fill="url(#gradient1)"></path>
+            fill="#1a748e"/>
             <path className="shape-overlays__path" 
-            strokeWidth="0.6"
-            fill="url(#gradient1)"></path>
-            { /*<path className="shape-overlays__path" 
-            fill="url(#gradient3)"></path> */}
+            fill="url(#gradient1)"/>
+            
         </svg>
 
 
