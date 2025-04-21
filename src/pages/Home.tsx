@@ -27,7 +27,7 @@ const Home = () => {
                             transition: { duration: 1 },
                         }}
                         whileTap={{ scale: 0.9 }}
-                        src="/starfish.png" alt="Starfish" className="h-12 md:h-18 -rotate-15 w-auto" />
+                        src="/starfish.png" alt="Starfish" className="h-16 md:h-28 -rotate-15 w-auto"/>
                 </div>
 
                 <div className="flex-grow flex justify-center items-center z-10">
@@ -43,7 +43,7 @@ const Home = () => {
 
 
 
-            <div className="relative h-[300vh] z-0">
+            <div className="relative h-[200vh] z-0">
                 <Wavy />
             </div>
             {/* <div className="relative z-10 h-[100vh] flex flex-col items-center justify-center text-white">
@@ -52,9 +52,9 @@ const Home = () => {
                     This content appears visually inside the wave, even if it's not *technically* inside the SVG.
                 </p>
             </div> */}
-            {/* <section className="bg-lastwave text-white min-h-screen relative z-2"> */}
+            <section className="bg-lastwave text-white h-[200vh] relative z-0"> 
                 <About />
-            {/* </section> */}
+            </section> 
         </>
 
 

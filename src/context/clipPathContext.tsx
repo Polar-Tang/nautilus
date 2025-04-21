@@ -1,26 +1,26 @@
-// import useAddProductClipPath from '@/hooks/useAddProductClipPath'
+// import useAddProductclipPathState from '@/hooks/useAddProductclipPathState'
 import { createContext, useState } from 'react'
 
-interface clipPathUseState {
-    clipPath: string
-    setClipPath: React.Dispatch<React.SetStateAction<string>>
+interface clipPathStateUseState {
+    clipPathState: string
+    setclipPathState: React.Dispatch<React.SetStateAction<string>>
 }
 
-export const ClipPathContext = createContext({} as clipPathUseState)
+export const clipPathStateContext = createContext({} as clipPathStateUseState)
 
-export const ClipPathProvider = ({ children }: {children: React.ReactNode
+export const clipPathStateProvider = ({ children }: {children: React.ReactNode
 }) => {
 
-    const [clipPath, setClipPath] = useState("");
+    const [clipPathState, setclipPathState] = useState("");
     
     return (
-        <ClipPathContext.Provider value={{
-            clipPath, 
-            setClipPath
+        <clipPathStateContext.Provider value={{
+            clipPathState, 
+            setclipPathState
         }}>
             {children}
-        </ClipPathContext.Provider>
+        </clipPathStateContext.Provider>
     )
 }
 
-export default ClipPathProvider                                                                                                                                                                       
+export default clipPathStateProvider                                                                                                                                                                       
