@@ -39,7 +39,6 @@ const Wavy = () => {
             start: "top bottom",
             end: "center top",
             scrub: true,
-            markers: true,
             animation: tl,
         })
         // create 2d array
@@ -100,7 +99,6 @@ const Wavy = () => {
                 d += isOpened ? ` V 100 H 0`  // bttom of the screen V 100, then closes left H 0
                     : ` V 0 H 0` // finished at the top
                 // setclipPathState(`${d}`) // not single quotes inside string
-                console.log(d)
 
                 path.setAttribute("d", d)
             }
