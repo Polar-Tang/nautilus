@@ -1,4 +1,10 @@
-const TurbulenceTitle = ({title}: {title: string}) => {
+import React from "react"
+
+type ComponentProps = {
+  title: string;
+} & React.HTMLAttributes<HTMLDivElement>;
+
+const TurbulenceTitle = ({title, ...props}: ComponentProps) => {
   return (
     <>
     
@@ -26,7 +32,7 @@ const TurbulenceTitle = ({title}: {title: string}) => {
           </filter>
         </svg>
 
-            <h3 className="text-4xl about-item font-bold hover:pointer" style={{ filter: 'url(#water-effect)' }}  >{title} </h3>
+            <h3  {...props}  style={{ filter: 'url(#water-effect)' }}  >{title} </h3>
 
 <svg width="0" height="0" >
   <filter id="shake-effect" >

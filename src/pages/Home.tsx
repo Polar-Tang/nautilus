@@ -43,7 +43,7 @@ const Home = () => {
 
 
 
-            <div className="relative h-[200vh] z-0">
+            <div className="relative h-[200vh] z-0 overflow-x-hidden">
                 <Wavy />
             </div>
             
