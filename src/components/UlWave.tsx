@@ -112,7 +112,7 @@ const UlWave = () => {
             clipPath: `url(#wave-clip)`,
           }}
         >
-          {/* <TurbulenceTitle className="about-item text-4xl absolute bottom-[10%]" title={"Backend Engeneering"} /> */}
+          <TurbulenceTitle className="about-item text-4xl absolute bottom-[10%]" title={"Backend Engeneering"} />
           
         </div>
     </div>

@@ -1,14 +1,12 @@
-import { useContext, useRef, useState } from 'react'
+import { useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { useGSAP } from '@gsap/react';
-import { clipPathStateContext } from '@/context/clipPathContext';
 
 const Wavy = () => {
 
     
     const overlayRef = useRef<SVGSVGElement>(null);
-    const { setclipPathState } = useContext(clipPathStateContext)
 
     let numPoints = 10;
     let delayPointsMax = 0.3;
