@@ -15,12 +15,11 @@ const Wavy = () => {
     let isOpened = true;
     let pointsDelay: number[] = [];
     let allPoints: number[][] = [];
-    gsap.registerPlugin(ScrollTrigger);
 
     useGSAP(() => {
         const overlay = overlayRef.current;
         if (!overlay) return;
-
+        // const ctx = gsap.context(() => {
         const paths = overlay.querySelectorAll("path");
         let numPaths = 2
         let tl = gsap.timeline({
@@ -103,6 +102,8 @@ const Wavy = () => {
                 path.setAttribute("d", d)
             }
         }
+    // },[overlayRef])
+    return ScrollTrigger.refresh();
     }, [])
 
 
