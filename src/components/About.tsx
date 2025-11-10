@@ -52,6 +52,7 @@ const About = () => {
           <div className="relative w-full md:w-3/4 lg:w-3/4 mx-auto aspect-[16/9]">
             <iframe
               className="absolute inset-0 w-full h-full z-0"
+
               src="https://www.youtube.com/embed/uCCKj7ojKfc?rel=0&modestbranding=1&playsinline=1&autoplay=1&mute=1"
               title="YouTube video player"
               allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -155,7 +155,7 @@ const UlWave = () => {
             <div className="relative w-full md:w-3/4 lg:w-3/4 mx-auto aspect-[16/9]">
               <iframe
                 className="absolute inset-0 w-full h-full z-2"
-                src="https://www.youtube.com/embed/uCCKj7ojKfc?rel=0&modestbranding=1&playsinline=1&autoplay=1&mute=1"
+                src="https://www.youtube.com/embed/Zv2JpbNuZ_8?rel=0&modestbranding=1&playsinline=1&autoplay=1&mute=1"
                 title="YouTube video player"
                 allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
@@ -174,7 +174,10 @@ const UlWave = () => {
                 <span className="w-2 h-2 bg-white rounded-full flex-shrink-0" aria-hidden="true"></span>
                 <span>PVP</span>
               </li>
-             
+             <li className="w-full md:w-3/4 flex items-center gap-3 px-4 py-2 rounded-md">
+                <span className="w-2 h-2 bg-white rounded-full flex-shrink-0" aria-hidden="true"></span>
+                <span>Attacks</span>
+              </li>
             </ul>
           </div>
 

@@ -53,14 +53,11 @@ const Home = () => {
             <div className='bg-masoscuro bg-cover bg-no-repeat w-full h-[100dvh] relative z-10 flex items-end space-between justify-around' >
             
             <img src='/footerShore.png' alt='footer' className='h-full w-full absolute inset-0 top-0 left-0 z-0 ' />
-
-                <Link to={"https://github.com/Polar-Tang"} target="_blank" className='h-48 w-36 basis-38 z-1 '>
-                    <img src='/githubPhishing.png' alt='footer'  />
+                
+                <Link to={"https://discord.com/users/1229054445602607174"} target="_blank" className='h-48 w-36 basis-38 z-1 '>
+                    <img src='/discord.png' alt='footer'  />
                 </Link>
                 
-                <Link className='h-24 w-24 basis-24 z-1' target="_blank" to={"https://notes-one-gold.vercel.app/"}>
-                <img src='/notes.png' alt='notes'  />
-                </Link>
             </div>
         </>
 
