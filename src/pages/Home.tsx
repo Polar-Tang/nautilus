@@ -57,7 +57,10 @@ const Home = () => {
                 <Link to={"https://discord.com/users/1229054445602607174"} target="_blank" className='h-48 w-36 basis-38 z-1 '>
                     <img src='/discord.png' alt='footer'  />
                 </Link>
-                
+                   
+                <Link to={"https://www.roblox.com/users/8742003634/profile/#!#creations"} target="_blank" className='h-48 w-16 basis-24 z-1'>
+                    <img src='/Roblox.png' alt='footer' className='h-full w-full object-contain' />
+                </Link>
             </div>
         </>
 
