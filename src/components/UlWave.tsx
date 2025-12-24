@@ -115,7 +115,7 @@ const UlWave = () => {
       <div
         ref={aboutContainerRef}
         className="z-1 relative h-[200dvh] w-full bg-oscazul text-white
-    overflow-hidden
+    overflow-x-hidden
       "
       >
         <svg

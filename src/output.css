@@ -285,8 +285,17 @@
   .-mt-60 {
     margin-top: calc(var(--spacing) * -60);
   }
+  .-mt-200 {
+    margin-top: calc(var(--spacing) * -200);
+  }
   .-mt-\[150px\] {
     margin-top: calc(150px * -1);
+  }
+  .-mt-\[300px\] {
+    margin-top: calc(300px * -1);
+  }
+  .-mt-\[350px\] {
+    margin-top: calc(350px * -1);
   }
   .mt-2 {
     margin-top: calc(var(--spacing) * 2);
@@ -345,11 +354,17 @@
   .h-\[100dvh\] {
     height: 100dvh;
   }
+  .h-\[120\%\] {
+    height: 120%;
+  }
   .h-\[200dvh\] {
     height: 200dvh;
   }
   .h-\[200vh\] {
     height: 200vh;
+  }
+  .h-\[300dvh\] {
+    height: 300dvh;
   }
   .h-auto {
     height: auto;
@@ -392,6 +407,9 @@
   }
   .w-140 {
     width: calc(var(--spacing) * 140);
+  }
+  .w-\[120\%\] {
+    width: 120%;
   }
   .w-auto {
     width: auto;
@@ -632,9 +650,19 @@
       height: calc(var(--spacing) * 86);
     }
   }
+  .sm\:h-\[130\%\] {
+    @media (width >= 40rem) {
+      height: 130%;
+    }
+  }
   .sm\:w-86 {
     @media (width >= 40rem) {
       width: calc(var(--spacing) * 86);
+    }
+  }
+  .sm\:w-\[130\%\] {
+    @media (width >= 40rem) {
+      width: 130%;
     }
   }
   .sm\:-translate-x-18 {
@@ -693,6 +721,11 @@
       height: calc(var(--spacing) * 92);
     }
   }
+  .md\:h-\[140\%\] {
+    @media (width >= 48rem) {
+      height: 140%;
+    }
+  }
   .md\:w-3\/4 {
     @media (width >= 48rem) {
       width: calc(3/4 * 100%);
@@ -706,6 +739,11 @@
   .md\:w-180 {
     @media (width >= 48rem) {
       width: calc(var(--spacing) * 180);
+    }
+  }
+  .md\:w-\[140\%\] {
+    @media (width >= 48rem) {
+      width: 140%;
     }
   }
   .md\:-translate-x-18 {
@@ -796,9 +834,24 @@
       height: calc(var(--spacing) * 112);
     }
   }
+  .xl\:h-\[150\%\] {
+    @media (width >= 80rem) {
+      height: 150%;
+    }
+  }
+  .xl\:h-\[300dvh\] {
+    @media (width >= 80rem) {
+      height: 300dvh;
+    }
+  }
   .xl\:w-112 {
     @media (width >= 80rem) {
       width: calc(var(--spacing) * 112);
+    }
+  }
+  .xl\:w-\[150\%\] {
+    @media (width >= 80rem) {
+      width: 150%;
     }
   }
   .xl\:-translate-x-18 {

@@ -39,12 +39,16 @@ const About = () => {
     <>
       <div
         id="first-wade"
-        className="shape-overlays z-1 absolute w-full h-[200dvh]
+        className="shape-overlays z-1 absolute w-full h-[300dvh]
       z-2 mx-auto -mt-60 py-32 bg-transparent 
       text-white
-      overflow-hidden
+      overflow-x-hidden
+      bg-no-repeat
+      bg-cover
       "
+      // style={{ backgroundImage: 'url(/surf.png)' }}
       >
+        
         <TurbulenceTitle
           className="about-item text-6xl absolute top-0 left-1/2 transform -translate-x-1/2 translate-y-2 z-50 text-white text-3xl md:text-5xl w-full text-center mb-20 font-bold pointer-events-none drop-shadow-lg"
           title={"Your simulator"}
@@ -54,15 +58,6 @@ const About = () => {
           <div className="relative w-full md:w-3/4 lg:w-3/4 mx-auto aspect-[16/9]">
             {/* uCCKj7ojKfc 8eqoF32qjNk */}
             <VideoFrame videoid="KdEYqfpB54c" />
-            {/* <iframe
-              className="absolute inset-0 w-full h-full z-0"
-
-              src="https://www.youtube.com/embed/?rel=0&modestbranding=1&playsinline=1&autoplay=1&mute=1"
-              title="YouTube video player"
-              allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            /> */}
-
 
           </div>
           <p className="w-full md:w-3/4 lg:w-3/4 mx-auto text-xl pt-8">
@@ -138,6 +133,9 @@ const About = () => {
             </ul>
           </div>
         </div>
+
+      </div>
+      <div className="xl:h-[300dvh] relative bg-oscazul">
 
       </div>
       <UlWave />
