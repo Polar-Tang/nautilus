@@ -42,7 +42,7 @@ const About = () => {
         className="shape-overlays z-1 absolute w-full h-[200dvh]
       z-2 mx-auto -mt-60 py-32 bg-transparent 
       text-white
-      overflow-x-hidden
+      overflow-hidden
       "
       >
         <TurbulenceTitle
@@ -65,7 +65,9 @@ const About = () => {
 
 
           </div>
-
+          <p className="w-full md:w-3/4 lg:w-3/4 mx-auto text-xl pt-8">
+            I leverage my web development background and full-stack programming experience to build entire Roblox games solo. On the backend, I architect multiplayer systems with a zero-trust <strong>anti-exploit</strong> approach to the client, using clean and scalable code. On the frontend, I build optimized UIs in <strong>Roact</strong>, focusing on practical designs that run smoothly on the client.
+          </p>
           {/* List placed directly below the video container */}
           <ul className="mt-6 md:mt-8 flex flex-col gap-4 justify-center items-center text-white text-sm md:text-base w-full">
             <li className="w-full md:w-3/4 mx-auto flex items-center gap-3 px-4 py-2 rounded-md">
@@ -99,8 +101,8 @@ const About = () => {
     "
               alt="image bubble"
             />
-            <h3 
-            className="absolute
+            <h3
+              className="absolute
             absolute -z-10
       top-0 right-0
       text-xl

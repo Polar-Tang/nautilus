@@ -3,6 +3,8 @@ import { motion } from 'motion/react'
 
 import "@/output.css"
 import { Link } from 'react-router-dom'
+import {ArrowDown} from 'lucide-react'
+
 
 const Home = () => {
 
@@ -31,10 +33,28 @@ const Home = () => {
                         src="/starfish.png" alt="Starfish" className="h-26 md:h-28 -rotate-15 w-auto" />
                 </div>
 
-                <div className="flex-grow flex justify-center items-center z-10">
-                    <img src="/nautilus.png" alt="Logo" className="h-auto w-140 md:w-100" />
+                <div className="flex-grow flex flex-col justify-center items-center z-10">
+                    <img src="/nautilus.png" alt="Logo" className="h-auto w-140 md:w-180 xl:240" />
+                    <style>{`
+                        @font-face {
+                            font-family: 'RubikGemstones';
+                            src: url('/fonts/PoiretOne-Regular.ttf') format('truetype');
+                        }
+                            @font-face {
+                            font-family: 'TASAOrbiter';
+                            src: url('/fonts/TASAOrbiter-Regular.ttf') format('truetype');
+                        }
+                    `}</style>
+                    <h3 className="text-center text-3xl pt-8" style={{ fontFamily: 'RubikGemstones' }}>Fullstack developer</h3>
+                    <h5 className="text-center text-xl pt-8 text-dark-500" > Let's build games.</h5>
                 </div>
-
+                <motion.div
+                    animate={{ y: [0, 10, 0] }}
+                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    className="flex justify-center z-10 absolute bottom-8 left-1/2 -translate-x-1/2"
+                >
+                    <ArrowDown className="h-8 w-8" />
+                </motion.div>
                 <div className="flex justify-end items-end p-5 z-10">
                     <div className="relative">
                         <Crab className="h-36 m-0" />

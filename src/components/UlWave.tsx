@@ -115,7 +115,7 @@ const UlWave = () => {
       <div
         ref={aboutContainerRef}
         className="z-1 relative h-[200dvh] w-full bg-oscazul text-white
-    overflow-x-hidden
+    overflow-hidden
       "
       >
         <svg
@@ -160,7 +160,9 @@ const UlWave = () => {
 
 
             </div>
-
+            <p className="w-full md:w-3/4 lg:w-3/4 mx-auto text-xl pt-8">
+              I implement combat systems using <strong>Client-Side Hit Detection</strong> that run smoothly in-game. My custom NPC system uses proximity prompts to start rendering and activate behavior only when a player is nearby—this improve allows to run several npcs at the same place. It even integrates with NPC quest givers that initialize quests dynamically based on the player's <strong>DataStore</strong> profile.
+            </p>
             {/* List placed directly below the video container */}
             <ul className="mt-6 md:mt-8 flex flex-col gap-4 justify-center items-center text-white text-sm md:text-base w-full">
               <li className="w-full md:w-3/4 flex items-center gap-3 px-4 py-2 rounded-md">
