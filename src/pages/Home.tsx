@@ -10,7 +10,7 @@ const Home = () => {
 
     return (
         <>
-            <div className="relative flex flex-col h-dvh w-full overflow-hidden">
+            <div className="relative flex flex-col h-dvh w-full overflow-hidden z-0">
                 {/* Background Layer */}
                 <div className="absolute h-dvh w-full  inset-0 bg-sand z-0">
                     <div
@@ -50,14 +50,14 @@ const Home = () => {
                 </div>
                 <motion.div
                     animate={{ y: [0, 10, 0] }}
-                    transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                    transition={{ duration: 1, repeat: Infinity, ease: "easeInOut" }}
                     className="flex justify-center z-10 absolute bottom-8 left-1/2 -translate-x-1/2"
                 >
                     <ArrowDown className="h-8 w-8" />
                 </motion.div>
-                <div className="flex justify-end items-end p-5 z-10">
-                    <div className="relative">
-                        <Crab className="h-36 m-0" />
+                <div className="flex justify-end items-end  z-10">
+                    <div className="relative z-10">
+                        <Crab className="h-36 w-56 xl:-mt-20 z-10 " />
                     </div>
                 </div>
             </div>
@@ -70,7 +70,7 @@ const Home = () => {
 
             <About />
 
-            <div className='bg-masoscuro bg-cover bg-no-repeat w-full h-[100dvh] relative z-10 flex items-end space-between justify-around' >
+            <div className='bg-masoscuro bg-cover bg-no-repeat w-full h-[100dvh] relative z-7 flex items-end space-between justify-around' >
             
             <img src='/footerShore.png' alt='footer' className='h-full w-full absolute inset-0 top-0 left-0 z-0 ' />
                 
